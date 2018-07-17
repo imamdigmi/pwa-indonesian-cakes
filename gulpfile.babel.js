@@ -64,9 +64,7 @@ gulp.task('images', () => {
 			}))
 			.pipe(gulp.dest('dist/images'))
 			.pipe($.size({title: 'product images'}))
-}
-
-);
+});
 
 // Copy all files at the root level (app)
 gulp.task('copy', () =>
@@ -172,6 +170,12 @@ gulp.task('serve', ['nodemon'], () =>
     open: false
   })
 );
+
+// Deploy to GitHub gh-pages
+gulp.task('deploy', ['default'], () => {
+  return gulp.src('dist/**/*')
+    .pipe($.ghPages());
+});
 
 // Build production files, the default task
 gulp.task('default', ['clean'], cb =>
