@@ -49,7 +49,7 @@ export default class CartView extends View {
       placeholder.innerHTML = `<tr class="product" data-sku="${product.sku}">
         <td class="mdl-data-table__cell-non-numeric">${product.title}</td>
         <td>${item.quantity}</td>
-        <td>$${product.price}</td>
+        <td>IDR ${product.price} ,-</td>
         <td><button class="mdl-button mdl-button--colored mdl-js-button
               mdl-js-ripple-effect mdl-button--accent delete"
               data-sku="${product.sku}" data-action="remove">
@@ -63,7 +63,7 @@ export default class CartView extends View {
   }
 
   updateTotal() {
-    document.getElementById('cart-total').innerText = `$${this._cart.total}`;
+    document.getElementById('cart-total').innerText = `IDR ${this._cart.total} ,-`;
   }
 
   removeFromView(sku) {
