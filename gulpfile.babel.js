@@ -56,14 +56,6 @@ gulp.task('images', () => {
     }))
     .pipe(gulp.dest('dist/images'))
     .pipe($.size({title: 'images'}));
-
-		gulp.src('../third_party/images/**/*')
-			.pipe($.imagemin({ // DEBUG removed $.cache( before imagemin
-				progressive: true,
-				interlaced: true
-			}))
-			.pipe(gulp.dest('dist/images'))
-			.pipe($.size({title: 'product images'}))
 });
 
 // Copy all files at the root level (app)
