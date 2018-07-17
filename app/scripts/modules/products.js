@@ -19,24 +19,24 @@ import Product from 'product';
 
 // Normally you would get these from a server
 export const products = [
-  new Product('BarrelChair', 'Barrel Chair', 100.00, 'BarrelChair.jpg',
-    'A beautiful chair made of upcycled barrel staves'),
-  new Product('C10', 'C10 Chair', 100.00, 'C10.jpg',
-    'A colorful chair with modern style and flair'),
-  new Product('Cl2', 'CL2 Chair', 100.00, 'Cl2.jpg',
-    'A comfortable extended chair made for lounging'),
-  new Product('CP03_blue', 'CP03 Chair', 100.00, 'CP03_blue.jpg',
-    'A wide cushion you can stack or move around the floor'),
-  new Product('CPC_RECYCLED', 'CPC Upcycled', 100.00, 'CPC_RECYCLED.jpg',
-    'A simple chair with a seat of recycled plastic'),
-  new Product('CPFS', 'CPFS', 100.00, 'CPFS.jpg',
-    'A footstool mader to complement the CPFS chair'),
-  new Product('CPO2_red', 'CPO2', 100.00, 'CPO2_red.jpg',
-    'A narrow cushion, smaller than CP03, and quite comfortable'),
-  new Product('CPT', 'CPT Table', 100.00, 'CPT.jpg',
-    'A perfect table for outdoors, has a hole for an umbrella'),
-  new Product('CS1', 'CS1 Sofa', 100.00, 'CS1.jpg',
-    'A soft, stylish, and colorful sofa. Perfect for your home')
+  new Product('KU1', 'Kue Cucur', 12.000, 'cucur.jpg',
+    'Tekstur luarnya basah dan menggembung, sedangkan dalamnya berserat empuk'),
+  new Product('KU2', 'Kue Apem', 9.000, 'apem.jpg',
+    'kue apem yang memiliki tekstur empuk dan lembut di mulut ini merupakan kue yang khas dari daerah betawi '),
+  new Product('KU3', 'Kue Putu Jawa', 13.000, 'putu.jpg',
+    'Kue yang berisi gula jawa dan parutan kelapa, tepung beras butiran kasar'),
+  new Product('KU4', 'Kue Dongkal Gula Merah', 18.000, 'dongkal.jpg',
+    'Kue Dongkal ini merupakan makanan tradisional khas Betawi. Tampilan dan rasanya mirip dengan kue awug dari Jawa'),
+  new Product('KU5', 'Bubur Grendul', 7.500, 'grendul.jpg',
+    'Rasanya yang manis dan gurih membuat makanan ini sangat dicari para pecinta kuliner'),
+  new Product('KU6', 'Surabi Jawa', 9.500, 'surabi.jpg',
+    'Kini serabi telah hadir dalam berbagai varian, seperti tambahan topping sosis, mayones dan lain sebagainya di atasnya'),
+  new Product('KU7', 'Kue Pancong', 11.500, 'pancong.jpg',
+    'Kue pancong yang terbuat dari santan, tepung beras, kelapa ini masih bisa ditemukan di beberapa penjaja kudapan di sudut ibu kota'),
+  new Product('KU8', 'Kue Mayang Sari', 10.000, 'mayang.jpg',
+    'Kue tradisional ini tampil dengan aneka ragam warna dan biasa disajikan bersama dengan kuah gula merah'),
+  new Product('KU9', 'Kue Cubit', 13.000, 'cubit.jpg',
+    'Banyak variasi dari kue cubit yang muncul seperti kue cubit laba-laba, kue cubit green tea, dan lainnya')
 ];
 
 export function findProduct(sku, searchRange = products) {
