@@ -21,7 +21,7 @@ const RW = 'readwrite';
 
 export default class IDBStorage {
 
-  constructor(id = 'mfs-cart-items') {
+  constructor(id = 'indonesian-cakes-cart') {
     this._id = id;
     this._open();
   }

@@ -55,7 +55,7 @@ var filesToCache = [
   'images/logo.png'
 ];
 
-var staticCacheName = 'e-commerce-v1';
+var staticCacheName = 'pwa-indonesian-cakes';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
