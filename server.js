@@ -16,13 +16,13 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist/public')));
 
 app.all('/checkout/', (req, res) => {
   res.sendStatus(200);
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8081;
 app.listen(PORT);
 
-console.log(`Started a local server at http://localhost:5000`);
+console.log(`Started a local server at http://localhost:8080`);

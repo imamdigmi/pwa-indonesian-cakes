@@ -157,8 +157,8 @@ gulp.task('nodemon', ['default'], cb => {
 // browserSync
 gulp.task('serve', ['nodemon'], () =>
   bs.init({
-    proxy: 'http://localhost:5001',
-    port: '5000',
+    proxy: 'http://localhost:8081',
+    port: '8080',
     open: false
   })
 );
