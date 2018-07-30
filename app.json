@@ -1,0 +1,8 @@
+{
+  "name": "Indonesian Cakes PWA demo",
+  "description": "Progressive Web App Indonesian Cakes",
+  "repository": "https://github.com/imamdigmi/pwa-indonesian-cakes",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node", "express", "heroku", "indonesian"],
+  "image": "heroku/nodejs"
+}
