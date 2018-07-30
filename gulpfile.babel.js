@@ -54,7 +54,7 @@ gulp.task('images', () => {
       progressive: true,
       interlaced: true
     }))
-    .pipe(gulp.dest('public/images'))
+    .pipe(gulp.dest('dist/public/images'))
     .pipe($.size({title: 'images'}));
 });
 
@@ -66,7 +66,7 @@ gulp.task('copy', () =>
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
-  }).pipe(gulp.dest('public'))
+  }).pipe(gulp.dest('dist/public'))
     .pipe($.size({title: 'copy'}))
 );
 
@@ -100,7 +100,7 @@ gulp.task('styles', () => {
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('public/styles'));
+    .pipe(gulp.dest('dist/public/styles'));
 });
 
 gulp.task('scripts', () => {
@@ -111,7 +111,7 @@ gulp.task('scripts', () => {
     .bundle()
     .pipe(source('main.min.js'))
     .on('error', err => { console.log('ERROR:', err.message); })
-    .pipe(gulp.dest('public/scripts/'));
+    .pipe(gulp.dest('dist/public/scripts/'));
 });
 
 // Scan your HTML for assets & optimize them
@@ -124,11 +124,11 @@ gulp.task('html', () => {
 
     // Output files
     .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
-    .pipe(gulp.dest('public'));
+    .pipe(gulp.dest('dist/public'));
 });
 
 // Clean output directory
-gulp.task('clean', () => del(['.tmp', 'public/*', '!public/.git'], {dot: true}));
+gulp.task('clean', () => del(['.tmp', 'dist/public/*', '!dist/public/.git'], {dot: true}));
 
 // Run unit tests
 gulp.task('test', (done) => {
