@@ -54,7 +54,7 @@ gulp.task('images', () => {
       progressive: true,
       interlaced: true
     }))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('public/images'))
     .pipe($.size({title: 'images'}));
 });
 
@@ -66,7 +66,7 @@ gulp.task('copy', () =>
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'))
+  }).pipe(gulp.dest('public'))
     .pipe($.size({title: 'copy'}))
 );
 
@@ -100,7 +100,7 @@ gulp.task('styles', () => {
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('dist/styles'));
+    .pipe(gulp.dest('public/styles'));
 });
 
 gulp.task('scripts', () => {
@@ -111,7 +111,7 @@ gulp.task('scripts', () => {
     .bundle()
     .pipe(source('main.min.js'))
     .on('error', err => { console.log('ERROR:', err.message); })
-    .pipe(gulp.dest('dist/scripts/'));
+    .pipe(gulp.dest('public/scripts/'));
 });
 
 // Scan your HTML for assets & optimize them
@@ -124,11 +124,11 @@ gulp.task('html', () => {
 
     // Output files
     .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('public'));
 });
 
 // Clean output directory
-gulp.task('clean', () => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
+gulp.task('clean', () => del(['.tmp', 'public/*', '!public/.git'], {dot: true}));
 
 // Run unit tests
 gulp.task('test', (done) => {
@@ -157,15 +157,15 @@ gulp.task('nodemon', ['default'], cb => {
 // browserSync
 gulp.task('serve', ['nodemon'], () =>
   bs.init({
-    proxy: 'http://localhost:8081',
-    port: '8080',
+    proxy: 'http://localhost:5001',
+    port: '5000',
     open: false
   })
 );
 
 // Deploy to GitHub gh-pages
 gulp.task('deploy', ['default'], () => {
-  return gulp.src('dist/**/*')
+  return gulp.src('public/**/*')
     .pipe($.ghPages());
 });
 
