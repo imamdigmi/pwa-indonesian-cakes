@@ -1,6 +1,8 @@
 # Progressive Web App
 This app is just for demo
 
+[DEMO APP](https://serene-woodland-52661.herokuapp.com/#shop)
+
 ## Prequesites
 NodeJS >= 4
 
